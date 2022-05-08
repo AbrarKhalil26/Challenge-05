@@ -1,0 +1,154 @@
+/*--------------------------------------------------------------
+// # Global style
+--------------------------------------------------------------*/
+*{
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+/*--------------------------------------------------------------
+// # Root colors
+--------------------------------------------------------------*/
+:root{
+/* ### Primary */
+    --Orange: hsl(25, 97%, 53%);
+/* ### Neutral */
+--White: hsl(0, 0%, 100%);
+--Light-Grey: hsl(217, 12%, 63%);
+--Medium-Grey: hsl(216, 12%, 54%);
+--Dark-Blue: hsl(213, 19%, 18%);
+--Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+/*--------------------------------------------------------------
+// # Global style
+--------------------------------------------------------------*/
+body{
+    width: 1400px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--Very-Dark-Blue);
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.selected{
+    background-color: var(--Light-Grey) !important;
+    color: var(--White) !important;
+}
+.d-none{
+    display: none;
+}
+/*--------------------------------------------------------------
+// # Content1 Global style
+--------------------------------------------------------------*/
+#content1,
+#content2 {
+    border: 0;
+    border-radius: 15px;
+    background-color: var(--Dark-Blue);
+    padding: 30px;
+    width: 28%;
+}
+#content1 .star{
+    background-color: rgb(124 135 152 / 0.1);
+    width: fit-content;
+    display: flex;
+    padding: 15px;
+    border-radius: 50%;
+}
+#content1 .text{
+    margin-top: 30px;
+}
+#content1 .text h1{
+    color: var(--White);
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+#content1 .text p{
+    font-size: 15px;
+    color: var(--Light-Grey);
+    line-height: 1.3rem;
+}
+#content1 .num{
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#content1 .num button{
+    background-color: rgb(124 135 152 / 0.1);
+    border-radius: 50%;
+    font-size: 15px;
+    padding: 15px 20px;
+    color: var(--Light-Grey);
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+#content1 .num button:hover{
+    background-color: var(--Orange);
+    color: var(--White);
+}
+#content1 .submit-button{
+    padding-top: 25px;
+}
+#content1 .submit-button button{
+    background-color: var(--Orange);
+    border: 0;
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--White);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    
+}
+#content1 .submit-button button:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+/*--------------------------------------------------------------
+// -------------------------------------------------------------
+// # Content2 style
+// -------------------------------------------------------------
+--------------------------------------------------------------*/
+#content2{
+    text-align: center;
+    margin-top: 5px;
+}
+#content2 .rate-result{
+    background-color: rgb(124 135 152 / 0.1);
+    color: var(--Orange);
+    padding: 6px;
+    margin: 30px 60px;
+    border-radius: 30px;
+}
+#content2 h1{
+    color: var(--White);
+    font-size: 26px;  
+    margin-bottom: 0;
+}
+#content2 p{
+    color: var(--Light-Grey);
+    font-size: 15px;
+    margin-top: 8px;
+    line-height: 1.3rem;
+}
+/*--------------------------------------------------------------
+// -------------------------------------------------------------
+// # Media Query
+// -------------------------------------------------------------
+--------------------------------------------------------------*/
+@media only screen and (max-width: 376px){
+    body{
+        width: 375px;
+    }
+    #content1,#content2{
+        width: 90%;
+    }
+}
